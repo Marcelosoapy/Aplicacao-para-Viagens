@@ -1,5 +1,5 @@
+import pytest # type: ignore
 import uuid
-import pytest
 from datetime import datetime, timedelta
 from .trips_repository import TripsRepository
 from src.models.settings.db_connection_handler import db_connection_handler
@@ -14,11 +14,11 @@ def test_create_trip():
 
     trips_infos = {
         "id": trip_id,
-        "destination": "Belo Horizonte",
+        "destination": "Osasco",
         "start_date": datetime.strptime("02-01-2024", "%d-%m-%Y"),
         "end_date": datetime.strptime("02-01-2024", "%d-%m-%Y") + timedelta(days=5),
-        "owner_name": "Marcelo",
-        "owner_email": "henriquemarcelo1124@email.com"
+        "owner_name": "Osvaldo",
+        "owner_email": "osvaldo@email.com"
     }
 
     trips_repository.create_trip(trips_infos)
