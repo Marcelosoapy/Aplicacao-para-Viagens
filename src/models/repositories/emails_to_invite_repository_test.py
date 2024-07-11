@@ -14,9 +14,9 @@ def test_registry_email():
     email_trips_infos = {
         "id": str(uuid.uuid4()),
         "trip_id": trip_id,
-        "email": "OOmGG@email.com"
+        "email": "henriquemarcelo1124@email.com"
     }
-
+    
     emails_to_invite_repository.registry_email(email_trips_infos)
 
 @pytest.mark.skip(reason="interacao com o banco")
